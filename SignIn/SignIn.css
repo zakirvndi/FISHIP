@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    background-color: #00D1FF;
+    font-family: "Poppins", sans-serif  ;
+}
+
+.signIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form{
+    display: flex;
+    /* gap: 20px; */
+
+    form{
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 400px;
+        .email{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .password{
+            width: 100%;
+        }
+
+        input{
+            border-radius: 10px;
+            padding: 0 15px;
+            border: 1px rgb(142, 142, 142) solid;
+            width: 90%;
+            height: 30px;
+        }
+
+        .r{
+            display: flex;
+            flex-direction: column;
+            font-weight: bolder;
+        }
+        .c{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bolder;
+            padding: 10px 30px;
+            .conf-pass{
+                margin-bottom: 1.2rem;
+                width: 50%;
+            }
+    
+            input{
+                border-radius: 10px;
+                padding: 0 15px;
+                border: 1px rgb(142, 142, 142) solid;
+                /* width: 100%; */
+                height: 30px;
+            }
+            span{
+                color: #1471B0;
+            }
+    
+            button{
+                margin-top: 10px;
+                width: 100%;
+                height: 30px;
+                border-radius: 10px;
+                background-color: #1471B0;
+                color: #f0f0f0;;
+                cursor: pointer;
+            }
+            .one{
+                img{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+    .img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-image: url('./Assets/bg.png');
+        background-position: center;
+        text-align: center;
+        background-size: cover;
+        width: 50%;
+        color: #f0f0f0;
+
+        button{
+            margin-top: 10px;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            border: transparent;
+            background-color: #1471B0;
+            color: #f0f0f0;;
+        }
+
+        .isi{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1{
+                margin-top: -100px;
+                margin-bottom: 90px;
+            }
+
+            button{
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
