@@ -1,0 +1,535 @@
+*, html{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+  
+
+:root {
+    /* Colors */ 
+    --primary-color: #1471B0;
+    --secondary-color: #3694d7;
+    --hover-color : #135480;
+    --purple--tertiary-color : #9672FF;
+    --red--secondary-color: #FF2C2C;
+    --green--secondary-color: #3AC2BA;
+    --yellow--secondary-color: #FABE1C;
+    --blue--secondary-color: #055DFA;
+    --black-color: black;
+    --white-color: white;
+    --secondary-grey-color : #CBCBCB;
+    --primary-grey-color : #A1A1A1;
+
+    /* Font size */
+    --xxl-font-size: 48px;
+    --xl-font-size: 32px;
+    --l-font-size: 24px;
+    --m-font-size: 20px;
+    --s-font-size: 16px;
+    --xs-font-size: 14px;
+
+    /* Font weight */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+/* header & navbar */
+
+/* header & navbar */
+header {
+    top: 0;
+    width: 100%;
+    padding: 24px 120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: var(--xl-font-size);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 410px;
+}
+
+.menu-item{
+    list-style: none;
+}
+
+.menu-item a{
+    color: black;
+    font-size: var(--s-font-size);
+    font-weight: var(--font-semibold);
+}
+
+.menu-item .highlight {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    display: flex;
+    gap: 3rem;
+    color: var(--primary-color);
+    font-size: var(--l-font-size);
+    font-weight: 500;
+}
+
+/* header end */
+
+
+/* search bar */
+.search-container{
+    margin: 100px auto 0 auto;
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.search-container h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.search-container h1 span{
+    color: var(--primary-color);
+}
+
+.search-bar {
+    width: 80%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fish-search{
+    display: flex;
+    width: 85%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.fish-search img{
+    width: 15px;
+    height: auto;
+    object-fit: contain;
+}
+
+.fish-search input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: var(--hover-color);
+}
+
+/* search bar end */
+
+/* main container */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 20px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+
+/* filter section */
+.filter-section {
+    width: 100%;
+    height: 90vh;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: sticky;
+    overflow: hidden; /* Ensure container doesn't overflow */
+}
+
+.filter-header {
+    width: 100%;
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    border-bottom: 0.5px solid var(--primary-grey-color);
+    margin-bottom: 1rem;
+}
+
+.filter-header h3 {
+    font-size: 2rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+.clear-btn, .apply-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0 5px; /* Add margin to buttons for better spacing */
+}
+
+.clear-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.apply-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.apply-btn:hover {
+    background-color: var(--purple--hover-color);
+    color: #fff;
+}
+
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group select{
+    padding: 10px 10px;
+    font-weight: 500;
+    color: var(--primary-grey-color);
+    width: 100%;
+    border: 0.5px solid var(--secondary-grey-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-group select:focus, .filter-group select:hover{
+    outline: none;
+    border: 1px solid gray;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: var(--font-bold);
+}
+
+.filter-group .checkbox-wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-wrapper label{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-grey-color);
+}
+
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: var(--secondary-grey-color);
+    border-radius: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.filter-group input[type="checkbox"]::after,
+.filter-group input[type="radio"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 15px;
+    color: white;
+    display: none;
+}
+
+.filter-group input[type="checkbox"]:hover,
+.filter-group input[type="radio"]:hover {
+    background-color: var(--primary-grey-color);
+}
+
+.filter-group input[type="checkbox"]:checked,
+.filter-group input[type="radio"]:checked {
+    background-color: var(--primary-color);
+}
+
+.filter-group input[type="checkbox"]:checked::after,
+.filter-group input[type="radio"]:checked::after {
+    display: block;
+}
+
+
+.rating-options label {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: var(--primary-color) ;
+    margin-right: 2px;
+}
+
+.star-empty {
+    color: #ccc;
+}
+
+/* product list section */
+.sort-by{
+    display: flex;
+    cursor: pointer;
+}
+
+.sort-by h3{
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+    position: relative;
+	background-color: #F4F4F4;
+	border-radius: 50px;
+    gap: 1rem;
+    padding: 5px 10px;
+}
+
+.selection select {
+    cursor: pointer;
+    padding: 0 0 0 10px;
+	font-size: 14px;
+	font-weight: var(--font-medium);
+    color: var(--secondary-grey-color);
+	border: none;
+	background-color: transparent;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	appearance: none;
+}
+.selection select:active, .selection select:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.selection select:hover{
+    color: var(--primary-grey-color);
+}
+
+/* product list */
+
+.product-list{
+    padding: 1.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Product card */
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: auto;
+    background-color: white;
+    position: relative;
+    pointer-events: auto; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    width: 270px;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card-header img {
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .card-header img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 2rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.cc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.card-content h3 {
+    display: flex;
+    gap: 5px;
+}
+
+.card-content h3 span {
+    display: flex;
+    color: var(--primary-color);
+}
+
+.card-content h3 span i {
+    font-size: 12px;
+}
+
+/* Loved button */
+.loved-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: auto; 
+}
+
+.loved-btn i {
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    color: var(--secondary-grey-color);
+    transition: transform 0.3;
+}
+
+.loved-btn i.loved {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.card-content p {
+    color: var(--primary-grey-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-price span {
+    color: var(--primary-color);
+}
+
+/* Ensure the entire card is clickable except the loved button */
+.product-list a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    pointer-events: auto; /* Enable pointer events for the anchor */
+}
+
+/* footer */
+
+.footer-container{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem 1rem 3rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-logo img{
+    width: 130px;
+}
+
+
+.footer-desc{
+    color: black;
+    font-size: var(--s-font-size);
+    font-weight: var(--font-semibold);
+}
+
+.social-icon{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.social-icon a{
+    margin: 0 10px;
+}
+
+.copyright{
+    color: black;
+    font-size: 0.7rem;
+}

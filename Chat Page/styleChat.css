@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors */ 
+    --primary-color: #1471B0;
+    --secondary-color: #3694d7;
+    --hover-color : #135480;
+    --purple--tertiary-color : #9672FF;
+    --red--secondary-color: #FF2C2C;
+    --green--secondary-color: #3AC2BA;
+    --yellow--secondary-color: #FABE1C;
+    --blue--secondary-color: #055DFA;
+    --black-color: black;
+    --white-color: white;
+    --secondary-grey-color : #CBCBCB;
+    --primary-grey-color : #A1A1A1;
+
+    /* Font size */
+    --xxl-font-size: 48px;
+    --xl-font-size: 32px;
+    --l-font-size: 24px;
+    --m-font-size: 20px;
+    --s-font-size: 16px;
+    --xs-font-size: 14px;
+
+    /* Font weight */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; 
+}
+
+a:visited {
+    color: #000;
+}
+
+.MainContainer{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 150px;
+}
+
+/* Header */
+header {
+    top: 0;
+    width: 100%;
+    padding: 24px 120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: var(--xl-font-size);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 410px;
+}
+
+.menu-item{
+    list-style: none;
+}
+
+.menu-item a{
+    color: black;
+    font-size: var(--s-font-size);
+    font-weight: var(--font-semibold);
+}
+
+.menu-item .highlight {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    display: flex;
+    gap: 3rem;
+    color: var(--primary-color);
+    font-size: var(--l-font-size);
+    font-weight: 500;
+}
+
+/* Chats */
+.Chats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0px 200px;
+}
+
+/* Chat List Container */
+.ChatListContainer { 
+    display: flex; 
+    max-width: 397px; 
+    flex-direction: column; 
+}
+
+.ChatListSection { 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15); 
+    background-color: #fff; 
+    display: flex; 
+    width: 100%;
+    flex-direction: column; 
+    padding: 29px 24px; 
+}
+
+.ChatTitle { 
+    color: #000; 
+    font: 700 40px Poppins, sans-serif; 
+}
+
+/* Chat Search */
+.ChatSearch { 
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.14); 
+    display: flex; 
+    margin-top: 12px; 
+    flex-direction: column; 
+    font-size: 16px; 
+    color: #a1a1a1; 
+    font-weight: 400; 
+    white-space: nowrap; 
+    justify-content: center; 
+    border-radius: 10px;
+}
+
+.SearchDetails { 
+    border-radius: 5px; 
+    background-color: #fff; 
+    display: flex; 
+    gap: 13px; 
+    padding: 11px; 
+}
+
+.SearchImg { 
+    aspect-ratio: 1; 
+    object-fit: auto; 
+    object-position: center; 
+    width: 25px; 
+    fill: #a1a1a1; 
+}
+
+.SearchInput {
+    flex-grow: 1; 
+    flex-basis: auto; 
+    border-style: none;
+}
+
+/* Chat Lists */
+.ChatList { 
+    justify-content: space-between; 
+    display: flex; 
+    margin-top: 12px; 
+    flex-direction: column; 
+    gap: 12px;
+}
+
+.SellerItem { 
+    justify-content: center; 
+    display: flex; 
+    flex-direction: column;
+    border-style: none; 
+    cursor: pointer;
+}
+
+/* Picked Seller */
+.SellerCardPicked { 
+    border-radius: 6px; 
+    border: 1px solid rgba(203, 203, 203, 1); 
+    background-color: #f6f6f6; 
+    display: flex; 
+    gap: 9px; 
+    padding: 18px 80px 18px 26px; 
+    height: 85px;
+}
+
+/* Not Picked */
+.SellerCardNotPicked { 
+    border-radius: 6px; 
+    border: 1px solid rgba(203, 203, 203, 1); 
+    background-color: white; 
+    display: flex; 
+    gap: 9px; 
+    padding: 18px 0px 18px 26px; 
+    height: 85px;
+}
+
+.SellerLogo { 
+    aspect-ratio: 1; 
+    object-fit: auto; 
+    object-position: center; 
+    width: 50px; 
+}
+
+.SellerInfo { 
+    display: flex; 
+    flex-direction: column; 
+    margin: auto 0; 
+}
+
+.SellerName { 
+    color: #1471b0; 
+    font: 500 14px Poppins, sans-serif; 
+}
+
+.ChatPreview { 
+    color: #a1a1a1; 
+    margin-top: 7px; 
+    font: 400 10px Poppins, sans-serif; 
+}
+
+/* Chat Container */
+.ChatContainer {
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 800px;
+    height: 800px;
+    flex-direction: column;
+    position: relative;
+}
+
+.ChatWrapper {
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+@media (max-width: 991px) {
+    .ChatWrapper {
+        max-width: 100%;
+    }
+}
+
+/* Seller Chat Name */
+.ChatHeader {
+    border-radius: 6px 6px 0px 0px;
+    border-color: rgba(203, 203, 203, 1);
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    background-color: #fff;
+    display: flex;
+    gap: 9px;
+    padding: 18px 80px 18px 26px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+    .ChatHeader {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+}
+
+.ProfileImg {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+.ProfileInfo {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.ProfileName {
+    color: #1471b0;
+    font: 500 14px Poppins, sans-serif;
+}
+
+.ProfileStatus {
+    color: #a1a1a1;
+    margin-top: 7px;
+    font: 400 10px Poppins, sans-serif;
+    
+}
+
+/* Buyyer Offer Card */
+.BuyerProductCard {
+    border-radius: 5px;
+    display: flex;
+    max-width: 280px;
+    flex-direction: column;
+    font-weight: 500;
+    justify-content: center;
+    align-self: flex-end;
+    margin-right: 25px;
+}
+
+.BuyerProductContainer {
+    border-radius: 5px;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 14px 21px;
+}
+
+.BuyerProductDetails {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.BuyerProductImg {
+    aspect-ratio: 2.08;
+    object-fit: auto;
+    object-position: center;
+    width: 103px;
+    align-self: end;
+    margin-top: 22px;
+    max-width: 100%;
+}
+
+.BuyerProductInfo {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.BuyerProductName {
+    color: #000;
+    font: 16px Poppins, sans-serif;
+    font-weight: 600;
+}
+
+.BuyerProductPrice {
+    margin-top: 10px;
+    color: rgba(20, 113, 176, 1);
+}
+
+.BuyerOfferStatus {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: rgba(20, 113, 176, 1);
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 26px;
+    color: #000;
+    text-align: center;
+    padding: 5px 10px;
+    font: 10px Poppins, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+.BuyerOfferContainer {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font: 500 10px Poppins, sans-serif;
+    align-self: flex-end;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+/* Seller Re-Offer Card */
+.SellerProductCard {
+    border-radius: 5px;
+    display: flex;
+    max-width: 280px;
+    flex-direction: column;
+    font-weight: 500;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.OfferButton {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.SellerOfferStatus {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: rgba(20, 113, 176, 1);
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 26px;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    font: 10px Poppins, sans-serif;
+    font-weight: 600;
+    background-color: rgba(20, 113, 176, 1);
+    cursor: pointer;
+}
+
+.SellerOfferContainer {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font: 500 10px Poppins, sans-serif;
+    align-self: flex-start;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.BuyerOfferStatus2 {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: rgba(20, 113, 176, 1);
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    font: 10px Poppins, sans-serif;
+    font-weight: 600;
+    background-color: rgba(20, 113, 176, 1);
+    cursor: pointer;
+    width: 100%;
+}
+
+/* User Chat Input */
+.ChatPlace {
+    display: flex;
+    gap: 14px;
+    font-size: 16px;
+    color: #a1a1a1;
+    font-weight: 400;
+    padding: 0 1px;
+    margin-left: 25px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    padding-right: 50px;
+}
+
+@media (max-width: 991px) {
+    .ChatPlace {
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+.ChatPlaceWrapper {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.14);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: fit-content;
+    margin: auto 0;
+    border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+    .ChatPlaceWrapper {
+        max-width: 100%;
+    }
+}
+
+.InputContainer {
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 13px 44px 13px 16px;
+}
+
+@media (max-width: 991px) {
+    .InputContainer {
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding-right: 20px;
+    }
+}
+
+.AdditionalImg {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 20px;
+}
+
+.InputText {
+    margin: auto 0;
+    width: 100%;
+    border-style: none;
+}
+
+.SendButton {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    background-color: white;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.SendImg {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer */
+.footer-container{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem 1rem 3rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-desc{
+    color: black;
+    font-size: var(--s-font-size);
+    font-weight: var(--font-semibold);
+}
+
+.social-icon{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.social-icon a{
+    margin: 0 10px;
+}
+
+.copyright{
+    color: white;
+    font-size: 0.7rem;
+}
