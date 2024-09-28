@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    background-color: #00D1FF;
+    font-family: "Poppins", sans-serif;
+}
+
+.signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{
+    background-color: #f0f0f0;
+    width: 50%;
+    padding: 35px;
+
+    .title{
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .r1{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        gap: 40px;
+        width: 100%;
+        font-weight: bolder;
+
+        .nama-depan{
+            width: 50%;
+        }
+        .email{
+            width: 50%;
+        }
+        .nama-belakang{
+            width: 50%;
+        }
+        .password{
+            width: 50%;
+        }
+        .conf-pass{
+            width: 40%;
+        }
+
+        input{
+            border-radius: 7px;
+            padding: 0 15px;
+            border: 2px rgb(142, 142, 142) solid;
+            width: 90%;
+            height: 30px;
+        }
+    }
+    .c{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bolder;
+        padding: 10px 30px;
+        .conf-pass{
+            margin-bottom: 1.2rem;
+            width: 50%;
+        }
+
+        input{
+            border-radius: 7px;
+            padding: 0 15px;
+            border: 2px rgb(142, 142, 142) solid;
+            height: 30px;
+        }
+        span{
+            color: #1471B0;
+        }
+
+        button{
+            margin-top: 10px;
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #1471B0;
+            color: #f0f0f0;;
+            cursor: pointer;
+        }
+        .one{
+            img{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: inherit;
+        }
+    }
+
+    .r{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
