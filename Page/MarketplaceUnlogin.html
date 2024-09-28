@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiship Marketplace Page</title>
+    <link rel="stylesheet" href="../Assets/css/marketplaceUnlogin.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- remix incon -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html"><img src="../Assets/Pic/Logo.png" alt=""></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href=""><span class="highlight">Pasar Ikan</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="./supplierUnlogin.html">Supplier</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Hubungi Kami</a>
+                </li>
+            </ul>
+
+            <div class="sign-btn">
+                <a href="./SignIn.html">Sign In</a>
+                <a href="./SignUp.html" class="sign-up">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="search-container">
+        <h1><span>Hasil</span> Tangkapan Terbaik Langsung Dari Laut!</h1>
+        <div class="search-bar">
+            <div class="fish-search">
+                <img src="../Assets/Pic/icon/search.png" alt="">
+                <input type="text" placeholder="Ikan Air Tawar">
+            </div>
+            <button>Cari</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- filter section -->
+        <div class="filter-section">
+            <div class="filter-header">
+                <h3>Filter</h3>
+                <button class="clear-btn" id="clear">Clear</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+            <div class="filter-group">
+                <label for="date-post">Tanggal Posting</label>
+                <select id="date-post">
+                    <option value="any">Any Time</option>
+                    <option value="today">Today</option>
+                    <option value="today">This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="year">This Year</option>
+                </select>
+            </div>
+    
+            <div class="filter-group">
+                <label>Jenis Ikan</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="full-time" name="job-type" value="Full-Time">
+                    <label for="full-time">Laut</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Tawar</label>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Kondisi Ikan</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="full-time" name="job-type" value="Full-Time">
+                    <label for="full-time">Hidup</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Segar</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Beku</label>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Rating Toko</label>
+                <div class="rating-options">
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-5" value="5">
+                        <label for="rating-5">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    </label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-4" value="4">
+                        <label for="rating-4">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-3" value="3">
+                        <label for="rating-3">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-2" value="2">
+                        <label for="rating-2">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-1" value="1">
+                        <label for="rating-1">
+                            <span class="star"><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Ukuran Ikan</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="entry-level" name="experience" value="Entry">
+                    <label for="entry-level">< 3 kg</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="intermediate-level" name="experience" value="Intermediate">
+                    <label for="intermediate-level">4 - 10 kg</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="expert-level" name="experience" value="Expert">
+                    <label for="expert-level">> 10 kg</label>
+                </div>  
+            </div>
+    
+            <div class="filter-group">
+                <label>Harga Ikan</label>
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="1-10">
+                <label for="">< 30.000</label>
+                </div>
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="11-20">
+                <label for="">31.000 - 100.000</label>
+                </div>
+                
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="11-20">
+                <label for="">>100.000</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="product-section">
+            <div class="sort-by">
+                <h3>Urutkan Berdasarkan</h3>
+                <div class="selection">
+                    <select id="date-post">
+                        <option>Terbaru</option>
+                        <option>Terlaris</option>
+                        <option>Rating</option>
+                        <option>Harga Tinggi ke Rendah</option>
+                        <option>Harga Rendah ke Tinggi</option>
+                    </select>
+                    <i class="ri-arrow-down-s-fill"></i>
+                </div>
+            </div>
+
+            <div class="product-list">
+                <!-- product 1 -->
+                    <article class="product-card">
+                        <a href="./SignIn.html">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Sardin.png" alt="">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="cc-header">
+                                <h3>Sardin <span class="rating">4.8 <i class="fa-solid fa-star"></i></span></h3>
+                                <button class="loved-btn"><i class="fa-solid fa-heart" ></i></button>
+                            </div>
+                            <p>Jakarta Utara</p>
+                            <p class="card-price"><span>Rp 25.000</span> /kg</p>
+                        </div>
+                    </article>
+                
+                <!-- product 2 -->
+                <article class="product-card">
+                    <a href="./SignIn.html">
+                        <div class="card-header">
+                            <img src="../Assets/Pic/ikan/Gurame.png" alt="">
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Gurame <span class="rating">4.5 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Bekasi Utara</p>
+                        <p class="card-price"><span>Rp 45.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 3 -->
+                <article class="product-card">
+                    <a href="./SignIn.html">
+                        <div class="card-header">
+                            <img src="../Assets/Pic/ikan/Tenggiri.png" alt="">
+                        </div>
+                    </a>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Tenggiri <span class="rating">4.9 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Jakarta Utara</p>
+                        <p class="card-price"><span>Rp 90.000</span> /kg</p>
+                    </div>
+                </article>
+                
+                <!-- product 4 -->
+                <article class="product-card">
+                    <a href="./SignIn.html">
+                        <div class="card-header">
+                            <img src="../Assets/Pic/ikan/Lele.png" alt="">
+                        </div>
+                    </a>    
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Lele <span class="rating">4.3 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Kabupaten Tangerang</p>
+                        <p class="card-price"><span>Rp 27.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 5 -->
+                <article class="product-card">
+                    <a href="./SignIn.html">
+                        <div class="card-header">
+                            <img src="../Assets/Pic/ikan/Gabus.png" alt="">
+                        </div>
+                    </a>    
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Gabus <span class="rating">4.5 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Bekasi Utara</p>
+                        <p class="card-price"><span>Rp 60.000</span> /kg</p>
+                    </div>
+                </article>
+                
+                <!-- product 6 -->
+                <article class="product-card">
+                    <a href="./SignIn.html">
+                        <div class="card-header">
+                            <img src="../Assets/Pic/ikan/Mujair.png" alt="">
+                        </div>
+                    </a>    
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Mujair <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Kabupaten Tangerang</p>
+                        <p class="card-price"><span>Rp 40.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 7 -->
+                    <article class="product-card">
+                        <a href="./SignIn.html">
+                            <div class="card-header">
+                            <img src="../Assets/Pic/ikan/Kakap.png" alt="">
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <div class="cc-header">
+                                <h3>Kakap Merah <span class="rating">4.1 <i class="fa-solid fa-star"></i></span></h3>
+                                <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                            </div>
+                            <p>Jakarta Utara</p>
+                            <p class="card-price"><span>Rp 70.000</span> /kg</p>
+                        </div>
+                    </article>
+
+                <!-- product 8 -->
+                <article class="product-card">
+                    <div class="card-header">
+                        <img src="../Assets/Pic/ikan/Tongkol.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Tongkol <span class="rating">4.8 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Kabupaten Bekasi</p>
+                        <p class="card-price"><span>Rp 29.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 9 -->
+                <article class="product-card">
+                    <div class="card-header">
+                        <img src="../Assets/Pic/ikan/Bandeng.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Bandeng<span class="rating">4.2 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Jakarta Utara</p>
+                        <p class="card-price"><span>Rp 30.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 10 -->
+                <article class="product-card">
+                    <div class="card-header">
+                        <img src="../Assets/Pic/ikan/Tuna.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Tuna <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Jakarta Utara</p>
+                        <p class="card-price"><span>Rp 65.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 11 -->
+                <article class="product-card">
+                    <div class="card-header">
+                        <img src="../Assets/Pic/ikan/Ikan Kembung.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Kembung<span class="rating">4.6 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Kabupaten Tangerang</p>
+                        <p class="card-price"><span>Rp 25.000</span> /kg</p>
+                    </div>
+                </article>
+
+                <!-- product 12 -->
+                <article class="product-card">
+                    <div class="card-header">
+                        <img src="../Assets/Pic/ikan/Baronang.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="cc-header">
+                            <h3>Baronang <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                            <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <p>Jakarta Utara</p>
+                        <p class="card-price"><span>Rp 90.000</span> /kg</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="../Assets/Pic/Logo.png" alt="">
+        </div>
+        <p class="footer-desc">Ikuti Kami</p>
+        <div class="social-icon">
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+        </div>
+        <p class="copyright">Copyright 2024 By FISHIP</p>
+    </footer>
+    
+
+    <script src="../Assets/js/marketplace.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link rel="stylesheet" href="../Assets/css/order-history.css">
+
+     <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- remix incon -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="./Marketplace.html"><img src="../Assets/Pic/Logo.png" alt=""></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./Marketplace.html">Pasar Ikan</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./Supplier.html">Supplier</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Hubungi Kami</a>
+                </li>
+            </ul>
+
+            <div class="nav-icon">
+                <a href="./Order-history.html"><i class="fa-solid fa-receipt" style="color: #1471b0;"></i></a>
+                <a href="./CartPage.html"><i class="fa-solid fa-cart-shopping" style="color: #1471b0;" ></i></a>
+                <a href=""><i class="fa-solid fa-user" style="color: #1471b0;"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="container-header">
+            <h1>Riwayat <span>Pesanan</span></h1>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="semua">Semua</button>
+                <button class="tab-button" data-tab="menunggu-konfirmasi">Menunggu Konfirmasi</button>
+                <button class="tab-button" data-tab="diproses">Di Proses</button>
+                <button class="tab-button" data-tab="dalam-pengiriman">Dalam Pengiriman</button>
+                <button class="tab-button" data-tab="selesai">Selesai</button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari Pesanan">
+                    <button><img src="../Assets/Pic/icon/search.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-list">
+            <!-- order 1 -->
+            <div class="order-item" data-status="selesai">
+                <div class="order-header">
+                    <div class="order-subheader">
+                        <div class="info-toko">
+                            <i class="fa-solid fa-shop"></i>
+                            <p>Ikan Air Laut Marunda</p>
+                            <span class="status selesai">Selesai</span>
+                        </div>
+                        <div class="order-info">
+                            <p>No Invoice: ID/INV/00293631182</p>
+                            <p>Tgl Pembelian: 16/06/2024</p>
+                        </div>
+                    </div>
+                    <button class="detail-transaction" onclick="showTransactionDetails()"><p>Lihat Detail Transaksi</p></button>
+                </div>
+                <div class="order-content">
+                    <div class="order-details">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../Assets/Pic/ikan/Kakap.png" alt="Kakap Merah">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kakap Merah</h3>
+                                <p class="price"><span>Rp 70.000</span> / kg</p>
+                                <p>3 Qty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-total">
+                            <p>Total Bayar</p>
+                            <p class="total-pay">Rp 223.500</p>
+                        </div>
+                    </div>
+                    <div class="order-actions">
+                        <button class="scndry-btn">Hubungi Penjual</button>
+                        <button class="prmry-btn">Beli Lagi</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- order 2 -->
+            <div class="order-item" data-status="dalam-pengiriman">
+                <div class="order-header">
+                    <div class="order-subheader">
+                        <div class="info-toko">
+                            <i class="fa-solid fa-shop"></i>
+                            <p>Ikan Air Laut Marunda</p>
+                            <span class="status sedang-dikirim">Sedang Dikirim</span>
+                        </div>
+                        <div class="order-info">
+                            <p>No Invoice: ID/INV/002936373282</p>
+                            <p>Tgl Pembelian: 16/06/2024</p>
+                        </div>
+                    </div>
+                    <button class="detail-transaction" onclick="showTransactionDetails()"><p>Lihat Detail Transaksi</p></button>
+                </div>
+                <div class="order-content">
+                    <div class="order-details">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../Assets/Pic/ikan/Kerapu.png" alt="Kerapu">
+                            </div>
+                            <div class="product-info">
+                                <h3>Kerapu</h3>
+                                <p class="price"><span>Rp 50.000</span> / kg</p>
+                                <p>2 Qty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-total">
+                            <p>Total Bayar</p>
+                            <p class="total-pay">Rp 100.000</p>
+                        </div>
+                    </div>
+                    <div class="order-actions">
+                        <button class="scndry-btn">Hubungi Penjual</button>
+                        <button class="prmry-btn detail-transaction" onclick="showShippingTrackingPopup()">Lacak</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- order 3 -->
+            <div class="order-item" data-status="selesai">
+                <div class="order-header">
+                    <div class="order-subheader">
+                        <div class="info-toko">
+                            <i class="fa-solid fa-shop"></i>
+                            <p>Ikan Air Laut Marunda</p>
+                            <span class="status selesai">Selesai</span>
+                        </div>
+                        <div class="order-info">
+                            <p>No Invoice: ID/INV/00293631182</p>
+                            <p>Tgl Pembelian: 16/06/2024</p>
+                        </div>
+                    </div>
+                    <button class="detail-transaction" onclick="showTransactionDetails()"><p>Lihat Detail Transaksi</p></button>
+                </div>
+                <div class="order-content">
+                    <div class="order-details">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../Assets/Pic/ikan/Bandeng.png" alt="Kakap Merah">
+                            </div>
+                            <div class="product-info">
+                                <h3>Ikan Bandeng</h3>
+                                <p class="price"><span>Rp 30.000</span> / kg</p>
+                                <p>5 Qty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-total">
+                            <p>Total Bayar</p>
+                            <p class="total-pay">Rp 164.500</p>
+                        </div>
+                    </div>
+                    <div class="order-actions">
+                        <button class="scndry-btn">Hubungi Penjual</button>
+                        <button class="prmry-btn">Beli Lagi</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- Transaction Details Popup -->
+        <div id="transaction-details-popup" class="popup transaction-details-popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('transaction-details-popup')">&times;</span>
+                <h2><span>Detail</span> Transaksi</h2>
+                <div class="info-pesanan">
+                    <div class="status-pesanan">
+                        <p >Status Pesanan :</p>
+                        <p class="status selesai">Selesai</p>
+                    </div>
+                    <div class="no-invoice">
+                        <p>No Invoice : </p>
+                        <p><span>ID/INV/00293631182</span></p>
+                    </div>
+                    <div class="tgl-pembelian">
+                        <p>Tgl Pembelian :</p>
+                        <p>16/06/2024</p>
+                    </div>
+                    
+                    <button class="ulas-btn" onclick="showReviewPopup()">Ulas</button>
+                </div>
+
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-subheader">
+                            <div class="info-toko">
+                                <i class="fa-solid fa-shop"></i>
+                                <p>Ikan Air Laut Marunda</p>
+                            </div>
+                        </div>
+                        <button class="detail-transaction" onclick="showTransactionDetails()"><p>Kunjungi Toko</p></button>
+                    </div>
+                    <hr>
+                    <div class="order-content">
+                        <div class="order-details">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../Assets/Pic/ikan/Kakap.png" alt="Kakap Merah">
+                                </div>
+                                <div class="product-info">
+                                    <h3>Ikan Kakap</h3>
+                                    <p class="price"><span>Rp 70.000</span> / kg</p>
+                                    <p>3 Qty</p>
+                                </div>
+                            </div>
+                            
+                            <div class="order-total">
+                                <p>Total Bayar</p>
+                                <p class="total-pay">Rp 164.500</p>
+                            </div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="scndry-btn">Hubungi Penjual</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-biaya">
+                    <h3>Rincian Biaya</h3>
+                    <div class="no-invoice">
+                        <p>Total Biaya Pesanan :</p>
+                        <p><span>Rp 210.000</span></p>
+                    </div>
+                    <div class="status-pesanan">
+                        <p >Total Ongkos Kirim :</p>
+                        <p>Rp 11.000</p>
+                    </div>
+                    <div class="tgl-pembelian">
+                        <p>Tgl Pembelian :</p>
+                        <p>16/06/2024</p>
+                    </div>
+                    <div class="total-pembelian">
+                        <p><span>Total</span> Pembelian</p>
+                        <p>Rp 224.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Popup -->
+        <div id="review-popup" class="popup review-popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h2><span>Ulas</span> Pesanan</h2>
+                    <span class="close" onclick="closePopup('review-popup')">&times;</span>
+                </div>
+                <div class="info-pesanan">
+                    <div class="status-pesanan">
+                        <p >Status Pesanan :</p>
+                        <p class="status selesai">Selesai</p>
+                    </div>
+                    <div class="no-invoice">
+                        <p>No Invoice : </p>
+                        <p><span>ID/INV/00293631182</span></p>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-subheader">
+                            <div class="info-toko">
+                                <i class="fa-solid fa-shop"></i>
+                                <p>Ikan Air Laut Marunda</p>
+                            </div>
+                        </div>
+                        <button class="detail-transaction" onclick="showTransactionDetails()"><p>Kunjungi Toko</p></button>
+                    </div>
+                    <hr>
+                    <div class="order-content">
+                        <div class="order-details">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../Assets/Pic/ikan/Kakap.png" alt="Kakap Merah">
+                                </div>
+                                <div class="product-info">
+                                    <h3>Ikan Kakap</h3>
+                                    <p class="price"><span>Rp 70.000</span> / kg</p>
+                                    <p>3 Qty</p>
+                                </div>
+                            </div>
+                            
+                            <div class="order-total">
+                                <p>Bagaimana Kualitas Dari Produk Ini?</p>
+                                <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="Tuliskan ulasan anda di sini..."></textarea>
+                <button class="review-btn" onclick="showReviewSubmittedPopup()">Kirim</button>
+            </div>
+        </div>
+
+        <!-- Review Submitted Popup -->
+        <div id="review-submitted-popup" class="popup review-submitted-popup">
+            <div class="popup-content">
+                <i class="fa-regular fa-circle-check"></i>
+                <div class="popUp-desc">
+                    <h3>Ulasan Berhasil Dikirim</h3>
+                    <p>Buka halaman produk untuk melihat ulasan</p>
+                </div>
+                <button class="ok-btn" onclick="closePopup('review-submitted-popup')">OK</button>
+            </div>
+        </div>    
+
+        <!-- Shipping Tracking Popup -->
+        <div id="shipping-tracking-popup" class="popup shipping-tracking-popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('shipping-tracking-popup')">&times;</span>
+                <h2>Lacak Pesanan</h2>
+                <p>Status Pesanan: Sedang Dikirim</p>
+                <p>No Invoice: ID/INV/002936373282</p>
+                <p>Tgl Pembelian: 16/06/2024</p>
+                <div class="tracking-info">
+                    <p>Pengirim: Ikan Laut Marunda</p>
+                    <p>Penerima: John Doe</p>
+                    <h3>Proses Pengiriman</h3>
+                    <ul>
+                        <li>18/06/2024 14:27 - Pesanan Dalam Pengiriman</li>
+                        <li>18/06/2024 13:30 - Pesanan berhasil di pick-up oleh kurir</li>
+                        <li>18/06/2024 12:57 - Penjual Melakukan Request Pick-up</li>
+                        <li>18/06/2024 09:47 - Penjual Mempersiap Pesanan</li>
+                        <li>16/06/2024 08:38 - Pembayaran Terkonfirmasi</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="./Marketplace/Assets/Logo.png" alt="">
+        </div>
+        <p class="footer-desc">Ikuti Kami</p>
+        <div class="social-icon">
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+        </div>
+        <p class="copyright">Copyright 2024 By FISHIP</p>
+    </footer>
+
+    <script src="../Assets/js/order.history.js"></script>
+</body>
+</html>

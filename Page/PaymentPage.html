@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FISHIP | Payment Page</title>
+    <link rel="stylesheet" href="../Assets/css/PaymentPage.css">
+
+    <!-- font awesome -->
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    
+    <!-- remix incon -->
+    <link 
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" 
+    rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href=""><img src="../Assets/Pic/Logo.png" alt=""></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./Marketplace.html">Pasar Ikan</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="./Supplier.html">Supplier</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Hubungi Kami</a>
+                </li>
+            </ul>
+
+            <div class="nav-icon">
+                <a href="./Order-history.html"><i class="fa-solid fa-receipt" style="color: #1471b0;"></i></a>
+                <a href="./CartPage.html"><i class="fa-solid fa-cart-shopping" style="color: #1471b0;" ></i></a>
+                <a href=""><i class="fa-solid fa-user" style="color: #1471b0;"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="MainContainer">
+        <h1><span style="color: #1471b0; font-weight: bold;">Detail</span> Pembayaran</h1>
+        
+        <!-- Contents -->
+        <div class="content">
+
+            <!-- Shipping Container -->
+            <section class="shipping-container">
+
+                <!-- Shipping Card -->
+                <div class="shipping-card">
+                    <h2 class="shipping-title">Pengiriman</h2>
+                    <h3 class="shipping-subtitle">Alamat Pengiriman</h3>
+
+                    <!-- Address Container -->
+                    <div class="address-container">
+                        <div class="address-details">
+                            <div class="address-type">
+                                <div>
+                                    <span class="address-type-text">Alamat <span style="color: #000">Rumah</span></span>
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/388692f28798207192fa8178fd5b33664d9c307b8fc8264a045b21cf73033f12?apiKey=543829d62897471cbbb3c571b29d4f3a&" alt="" class="address-icon" />
+                                </div>
+                                <button class="edit-button">Ubah</button>
+                            </div>
+                            <div class="contact-info">
+                                <span>John Doe</span>
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f6afdc44e375f02304a9907ca075da822110237d601fe13b9bf2c06cc154627?apiKey=543829d62897471cbbb3c571b29d4f3a&" alt="" class="contact-separator" />
+                                <span>08218329202</span>
+                            </div>
+                            <p class="address-text">
+                            Jl Jend Sudirman Kav 10-11 Midplaza 1 Lt 4,Senayan<br />
+                            Kebayoran Baru, Jakarta
+                            </p>
+                            <span class="status-badge">Aktif</span>
+                        </div>
+                    </div>
+                    
+                    <hr class="divider" />
+                    
+                    <h3 class="shipping-method-title">Metode Pengiriman</h3>
+
+                    <!-- Shipping Method Container -->
+                    <div class="shipping-method-container">
+                        <div class="shipping-details">
+                            <div class="shipping-selection">
+                                <span class="shipping-selection-text">Pilih <span style="color: #000">Pengiriman</span></span>
+                                <div class="product-info">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36a8ca3850e7122322b6267311f7f86ab71300d3907a3e11656f928ea0f2f575?apiKey=543829d62897471cbbb3c571b29d4f3a&" alt="Ikan Kakap Merah" class="product-image" />
+                                    <div class="product-details">
+                                        <span class="product-name">Ikan Kakap Merah</span>
+                                        <span class="product-price">
+                                            <span style="color: #1471b0">Rp 70.000</span>
+                                            <span style="color: #a1a1a1">/kg</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="product-quantity">3 x Rp70.000</span>
+                        </div>
+                        <div class="shipping-option">
+                            <div class="dropdown-container">
+                                <div class="dropdown-selected">Select an option</div>
+                                <div class="dropdown-options">
+                                    <div data-value="11000"><span>Reguler</span><span style="font-weight: 100;">11.000</span></div>
+                                    <div data-value="20000"><span>Cepat</span><span style="font-weight: 100;">20.000</span></div>
+                                    <div data-value="30000"><span>Same Day</span><span style="font-weight: 100;">30.000</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Content -->
+            <div class="content-right">
+
+                <!-- Payment Container -->
+                <section class="payment-container">
+                    <div class="payment-content">
+                        <div class="payment-header">
+                        <div class="payment-title-wrapper">
+                            <h2 class="payment-title">Pilih <span>Pembayaran</span></h2>
+                            <hr class="divider" />
+                            <p class="payment-subtitle">Metode Pembayaran</p>
+                        </div>
+                        <a href="#" class="view-all-link">Lihat Semua</a>
+                    </div>
+
+                        <!-- Payment Options -->
+                        <div class="payment-options">
+                            <form>
+                                <div class="option-container">
+                                    <label class="option-label">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/053eae1ac824c31beadff049385d6bc01e05187968a65901a34458e8ffcef6e7?apiKey=543829d62897471cbbb3c571b29d4f3a&" alt="gopay">
+                                    </label>
+                                    <input type="radio" name="payment" class="option-radio" value="gopay">
+                                </div>
+                                <div class="option-container">
+                                    <label class="option-label">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/78e9c69095dee1e0ebe2b84573edb58aaad164d05e914a97cf65043769c3d567?apiKey=543829d62897471cbbb3c571b29d4f3a&" alt="dana">
+                                    </label>
+                                    <input type="radio" name="payment" class="option-radio" value="dana">
+                                </div>
+                                <div class="option-container">
+                                    <label class="option-label">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/48d929906dadfc09ff9033023d8d3baa816bdbd26915851eeea1e0db14a4f04b?apiKey=543829d62897471cbbb3c571b29d4f3a&" alt="bank_transfer">
+                                        <span>Bank Transfer</span>
+                                    </label>
+                                    <input type="radio" name="payment" class="option-radio" value="bank_transfer">
+                                </div>
+                            </form>
+                        </div>
+                      
+                        <div class="payment-summary">
+                            <div class="summary-row">
+                                <span class="summary-label">Subtotal</span>
+                                <span class="summary-value">Rp 210.000</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Biaya Pengiriman</span>
+                                <span class="summary-value">Rp 11.000</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Biaya Admin</span>
+                                <span class="summary-value">Rp 3.500</span>
+                            </div>
+                            <hr class="divider" />
+                            <div class="dropdown2-container">
+                                <select>
+                                    <option value="" disabled selected>Promo</option>
+                                    <option value="10_percent">Potongan 10%</option>
+                                    <option value="free_shipping">Gratis Ongkir</option>
+                                </select>
+                                <span class="dropdown2-icon">▼</span>
+                            </div>
+                            <hr class="divider" />
+                            <div class="summary-row total-row">
+                                <span class="summary-label">Total</span>
+                                <span class="summary-value">Rp 224.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <button class="payment-button">Bayar Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up -->
+    <div class="popUp-container">
+        <div class="popUp-Content">
+            <i class="fa-regular fa-circle-check"></i>
+            <div class="popUp-desc">
+                <h2>Pembayaran Berhasil</h2>
+                <p>Buka detail transaksi untuk melihat rincian</p>
+            </div>
+            <a href="./Order-history.html"><button class="close">Detail Transaksi</button></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="Assets/Logo.png" alt="">
+        </div>
+        <p class="footer-desc">Ikuti Kami</p>
+        <div class="social-icon">
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+        </div>
+        <p class="copyright">Copyright 2024 By V-Kellogg's</p>
+    </footer>
+
+    <script src="../Assets/js/PaymentJS.js"></script>
+
+</body>
+</html>

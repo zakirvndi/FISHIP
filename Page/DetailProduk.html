@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="../Assets/css/DetailProduk.css">
+
+     <!-- font awesome -->
+     <link rel="stylesheet" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+ 
+     <!-- remix incon -->
+     <link
+     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+     rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="./Marketplace.html"><img src="../Assets/Pic/Logo.png" alt=""></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./Marketplace.html">Pasar Ikan</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./Supplier.html">Supplier</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Hubungi Kami</a>
+                </li>
+            </ul>
+
+            <div class="nav-icon">
+                <a href="./Order-history.html"><i class="fa-solid fa-receipt" style="color: #1471b0;"></i></a>
+                <a href="./CartPage.html"><i class="fa-solid fa-cart-shopping" style="color: #1471b0;" ></i></a>
+                <a href=""><i class="fa-solid fa-user" style="color: #1471b0;"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title"><span style="color: #3F8CBF;">Detail</span> Produk</h1>
+            <div class="product-detail">
+                <div class="product-info">
+                    <div class="product-desc">
+                        <img src="../Assets/Pic/ikan/Kakap.png" alt="Ikan Kakap Merah">
+                        <div class="prodtext">
+                            <div class="detail-top">
+                                <h2>Ikan Kakap Merah</h2>
+                                <p class="sold">Terjual 5rb+ <span style="color: black; font-weight: bold;">4.1</span><span style="color: #1471B0;">★</span> (263)</p>
+                                <p class="price"><span style="color: #3F8CBF;">Rp 70.000</span> / kg</p>
+                            </div>
+                            <div class="detail">
+                                <h3>Detail Produk</h3>
+                                <p>Kondisi ikan :</p>
+                                <ul style="color: #6A6A6A;">
+                                    <li>Segar ✓</li>
+                                    <li>Fillet ✓</li>
+                                    <li>Beku ✓</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Deskripsi</h3>
+                        <ul style="color: #6A6A6A;">
+                            <li>Rasakan kenikmatan Ikan Kakap Merah kami! Dikemas dengan hati-hati dalam plastik vacuum food grade untuk menjaga kesegaran, dan dapat disimpan hingga 3 bulan dalam freezer.</li>
+                            <li>Selain lezat, ikan kakap merah juga dikenal sebagai sumber yang kaya akan asam lemak omega-3 yang baik untuk kesehatan jantung dan otak.</li>
+                            <li>Diproduksi sesuai dengan standar kualitas tertinggi, halal, dan bebas campuran. Stok selalu baru dan terjaga, dikirimkan dengan cepat setiap hari.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="purchase-info">
+                    <h3><span style="color: #3F8CBF;">Rincian</span> Biaya dan Jumlah</h3>
+                    <div class="purchase-desc"> 
+                        <div class="purchase-desc-top">
+                            <img src="../Assets/Pic/ikan/Kakap.png" alt="Ikan Kakap Merah">
+                            <div class="purchase-desc-details">
+                                <p>Ikan Kakap Merah</p>
+                                <p><span style="color: #3F8CBF;">Rp 70.000</span><span style="font-weight: 100; color: #A1A1A1;">/kg</span></p>
+                                <p style="color: #1471B0;">★★★★</p>
+                            </div>
+                        </div>
+                        <div class="quantity-product">
+                            <div class="quantity-container">
+                                <button class="quantity-btn" id="decrease-btn">-</button>
+                                <div class="quantity-display" id="quantity">1</div>
+                                <button class="quantity-btn" id="increase-btn">+</button>
+                            </div>
+                            <p><span style="font-weight: 100; color: #A1A1A1;">Stock:</span> 102</p>
+                        </div>
+                        <div class="price-sub">
+                            <p class="sub-total"><span style="color: #3F8CBF;">Sub</span> Total: </p><p>Rp 210.000</p>
+                        </div>
+                        <a href="./PaymentPage.html"><button class="buy-now">Beli Sekarang</button></a>
+                        <a href="./CartPage.html"><button class="add-to-cart">Masukkan Keranjang</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-info">
+                <div class="store-info">
+                    <h3>Informasi Toko</h3>
+                    <div class="store-details">
+                        <img src="../Assets/Pic/icon/supplier1.png" alt="store">
+                        <div class="store-text">
+                            <p class="store-text-1" >Ikan Air Laut Marunda</p>
+                            <p class="store-text-2" style="font-size: 15px;">Jakarta Utara, 10250</p>
+                            <p class="store-text-3" style="color: #A1A1A1; font-size: 15px;">Sedia ikan air laut, Jakarta Utara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shipping-info">
+                    <h3>Pengiriman</h3>
+                    <div class="shipping-details">
+                        <img src="../Assets/Pic/icon/box.png" alt="ship">
+                        <div class="shipping-text">
+                            <p style="font-weight: bold; font-size: 20px;">Dikirim dari <span style="color: #1471B0;">Jakarta Utara</span></p>
+                            <p style="color: #A1A1A1; font-size: 15px;">Pengiriman menggunakan Ice Box</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="reviews">
+            <div class="product-reviews">
+                <h2><span style="color: #3F8CBF;">Ulasan </span>Produk</h2>
+                <div class="rates-desc">
+                    <p style="font-weight: bolder;"><span>4.1 <i class="fa-solid fa-star"></i></span></p>
+                    <p style="font-weight: bold;">80% Pembeli Merasa Puas</p>
+                    <p style="color: #A1A1A1;">5rb+ Pembelian 263 Ulasan</p>
+                </div>
+                <div class="rating-chart">
+                    <div class="rating-bar">
+                        <span class="star">5<i class="fa-solid fa-star"></i></span>
+                        <div class="bar">
+                            <div class="fill" style="width: 78%;"></div>
+                        </div>
+                        <span class="count">183</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="star">4<i class="fa-solid fa-star"></i></span>
+                        <div class="bar">
+                            <div class="fill" style="width: 27%;"></div>
+                        </div>
+                        <span class="count">62</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="star">3<i class="fa-solid fa-star"></i></span>
+                        <div class="bar">
+                            <div class="fill" style="width: 4%;"></div>
+                        </div>
+                        <span class="count">9</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="star">2<i class="fa-solid fa-star"></i></span>
+                        <div class="bar">
+                            <div class="fill" style="width: 3%;"></div>
+                        </div>
+                        <span class="count">7</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="star">1<i class="fa-solid fa-star"></i></span>
+                        <div class="bar">
+                            <div class="fill" style="width: 1%;"></div>
+                        </div>
+                        <span class="count">2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="user-reviews">
+                <div class="review1"></div>
+                <div class="review2"></div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+
+     <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="../Assets/Pic/Logo.png" alt="">
+        </div>
+        <p class="footer-desc">Ikuti Kami</p>
+        <div class="social-icon">
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+        </div>
+        <p class="copyright">Copyright 2024 By FISHIP</p>
+    </footer>
+    <script src="../Assets/js/DetailProduk.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang</title>
+    <link rel="stylesheet" href="../Assets/css/CartPage.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- remix incon -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href=""><img src="../Assets/Pic/Logo.png" alt=""></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./Marketplace.html"><span class="highlight">Pasar Ikan</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="./Supplier.html">Supplier</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Hubungi Kami</a>
+                </li>
+            </ul>
+
+            <div class="nav-icon">
+                <a href="./Order-history.html"><i class="fa-solid fa-receipt" style="color: #1471b0;"></i></a>
+                <a href="./CartPage.html"><i class="fa-solid fa-cart-shopping" style="color: #1471b0;" ></i></a>
+                <a href=""><i class="fa-solid fa-user" style="color: #1471b0;"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="page-title" style="color: #1471B0;"><h1>Keranjang</h1></div>
+        <center>
+            <div class="sorting-sect">
+                <div class="checkbox"><input type="checkbox"> Produk</div>
+                <div class="sort-type">
+                    <p>Harga per Kg</p>
+                    <p>Kuantitas</p>
+                    <p>Total Harga</p>
+                </div>
+            </div>
+        </center>
+        <center>
+            <div class="cart-sect">
+                <div class="cart-store-sect">
+                    <input type="checkbox">Ikan Air Laut Marunda
+                </div>
+                <div class="cart-product-sect">
+                    <div class="product-check">
+                        <input type="checkbox">
+                        <img src="../Assets/Pic/ikan/Kakap.png" alt="Ikan Kakap Merah">
+                        <p>Ikan Kakap Merah</p>
+                    </div>
+                    <div class="product-list-details">
+                        <p>Rp 70.000</p>
+                        <div class="quantity-container">
+                            <button class="quantity-btn" id="decrease-btn">-</button>
+                            <div class="quantity-display" id="quantity">1</div>
+                            <button class="quantity-btn" id="increase-btn">+</button>
+                        </div>
+                        <p>Rp 350.000</p>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <div class="order-sum">
+            <div class="order-sum-card">
+                <div class="order-sum-top"><h2><span style="color: #1471B0;">Ringkasan</span> Belanja</h2></div>
+                <div class="rincian-biaya">
+                    <p>Subtotal <span style="float: right; font-weight: bold;">Rp 210.000</span></p>
+                    <p>Biaya Admin <span style="float: right; font-weight: bold;">Rp 3.500</span></p>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" onclick="toggleDropdown()">Promo <span>&#x25B6;</span></button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" class="dropdown-item">Potongan 10%</a>
+                        <a href="#" class="dropdown-item">Gratis Ongkir</a>
+                    </div>
+                </div>
+                <p>Total <span style="float: right; font-weight: bold;">Rp 213.500</span></p>
+            </div>
+            <a href="./PaymentPage.html"><button class="buy-button">Beli Sekarang</button></a>
+        </div>
+        <div>
+            <div class="recommended-sect">
+                <div class="recommended-title"><h3>Rekomendasi Lainnya</h3></div>
+                <div class="recommended-product">
+                    <div class="product-list">
+                        <!-- product 1 -->
+                            <article class="product-card">
+                                <a href="">
+                                    <div class="card-header">
+                                        <img src="../Assets/Pic/ikan/Sardin.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="card-content">
+                                    <div class="cc-header">
+                                        <h3>Sardin <span class="rating">4.8 <i class="fa-solid fa-star"></i></span></h3>
+                                        <button class="loved-btn"><i class="fa-solid fa-heart" ></i></button>
+                                    </div>
+                                    <p>Jakarta Utara</p>
+                                    <p class="card-price"><span>Rp 25.000</span> /kg</p>
+                                </div>
+                            </article>
+                        
+                        <!-- product 2 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Gurame.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Gurame <span class="rating">4.5 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Bekasi Utara</p>
+                                <p class="card-price"><span>Rp 45.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 3 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Tenggiri.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Tenggiri <span class="rating">4.9 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Jakarta Utara</p>
+                                <p class="card-price"><span>Rp 90.000</span> /kg</p>
+                            </div>
+                        </article>
+                        
+                        <!-- product 4 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Lele.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Lele <span class="rating">4.3 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Kabupaten Tangerang</p>
+                                <p class="card-price"><span>Rp 27.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 5 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Gabus.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Gabus <span class="rating">4.5 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Bekasi Utara</p>
+                                <p class="card-price"><span>Rp 60.000</span> /kg</p>
+                            </div>
+                        </article>
+                        
+                        <!-- product 6 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Mujair.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Mujair <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Kabupaten Tangerang</p>
+                                <p class="card-price"><span>Rp 40.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 7 -->
+                            <article class="product-card">
+                                <div class="card-header">
+                                    <img src="../Assets/Pic/ikan/Kakap.png" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <div class="cc-header">
+                                        <h3>Kakap Merah <span class="rating">4.1 <i class="fa-solid fa-star"></i></span></h3>
+                                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                    </div>
+                                    <p>Jakarta Utara</p>
+                                    <p class="card-price"><span>Rp 70.000</span> /kg</p>
+                                </div>
+                            </article>
+        
+                        <!-- product 8 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Tongkol.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Tongkol <span class="rating">4.8 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Kabupaten Bekasi</p>
+                                <p class="card-price"><span>Rp 29.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 9 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Bandeng.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Bandeng<span class="rating">4.2 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Jakarta Utara</p>
+                                <p class="card-price"><span>Rp 30.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 10 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Tuna.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Tuna <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Jakarta Utara</p>
+                                <p class="card-price"><span>Rp 65.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 11 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Ikan Kembung.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Kembung<span class="rating">4.6 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Kabupaten Tangerang</p>
+                                <p class="card-price"><span>Rp 25.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+                        <!-- product 12 -->
+                        <article class="product-card">
+                            <div class="card-header">
+                                <img src="../Assets/Pic/ikan/Baronang.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="cc-header">
+                                    <h3>Baronang <span class="rating">5.0 <i class="fa-solid fa-star"></i></span></h3>
+                                    <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                                <p>Jakarta Utara</p>
+                                <p class="card-price"><span>Rp 90.000</span> /kg</p>
+                            </div>
+                        </article>
+        
+        
+        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="../Assets/Pic/Logo.png" alt="">
+        </div>
+        <p class="footer-desc">Ikuti Kami</p>
+        <div class="social-icon">
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+        </div>
+        <p class="copyright">Copyright 2024 By FISHIP</p>
+    </footer>
+    
+    <script src="../Assets/js/CartPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiship Supplier Page</title>
+    <link rel="stylesheet" href="../Assets/css/supplierUnlogin.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- remix incon -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html"><img src="../Assets/Pic/Logo.png" alt=""></a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./MarketplaceUnlogin.html">Pasar Ikan</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="./supplierUnlogin.html"><span class="highlight">Supplier</span></a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Hubungi Kami</a>
+                </li>
+            </ul>
+
+            <div class="sign-btn">
+                <a href="./SignIn.html">Sign In</a>
+                <a href="./SignUp.html" class="sign-up">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="search-container">
+        <h1><span>Temukan</span> Supplier Yang Sesuai!</h1>
+        <div class="search-bar">
+            <div class="fish-search">
+                <img src="../Assets/Pic/icon/search.png" alt="">
+                <input type="text" placeholder="Ikan Air Tawar">
+            </div>
+            <button>Cari</button>
+        </div>
+    </div>
+
+    <div class="filter-bar">
+        <button class="filter-toggle" onclick="toggleAdvancedFilter()"><i class="ri-equalizer-fill"></i></button>
+        <div class="quick-filters">
+            <div class="sort-by">
+                <h3>Urutkan Berdasarkan</h3>
+                <div class="selection">
+                    <select id="date-post">
+                        <option disabled>Terbaru</option>
+                        <option>Terlaris</option>
+                        <option>Rating</option>
+                        <option>Harga Tinggi ke Rendah</option>
+                        <option>Harga Rendah ke Tinggi</option>
+                    </select>
+                    <i class="ri-arrow-down-s-fill"></i>
+                </div>
+            </div>
+            
+            <div class="sort-by">
+                <div class="selection">
+                    <select id="date-post">
+                        <option disabled>Jenis Ikan</option>
+                        <option>Ikan Laut</option>
+                        <option>Ikan Air Tawar</option>
+                    </select>
+                    <i class="ri-arrow-down-s-fill"></i>
+                </div>
+            </div>
+
+            <div class="sort-by">
+                <div class="selection">
+                    <select id="date-post">
+                        <label for="date-post">Kondisi Ikan</label>
+                        <option disabled>Kondisi Ikan</option>
+                        <option>Hidup</option>
+                        <option>Segar</option>
+                        <option>Beku</option>
+                    </select>
+                    <i class="ri-arrow-down-s-fill"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="advanced-filter" id="advanced-filter">
+            <div class="filter-header">
+                <h3>Filter</h3>
+                <button class="close-btn" onclick="toggleAdvancedFilter()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="filter-group">
+                <label for="date-post">Tanggal Posting</label>
+                <select id="date-post">
+                    <option value="any">Any Time</option>
+                    <option value="today">Today</option>
+                    <option value="today">This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="year">This Year</option>
+                </select>
+            </div>
+    
+            <div class="filter-group">
+                <label>Jenis Ikan</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="full-time" name="job-type" value="Full-Time">
+                    <label for="full-time">Laut</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Tawar</label>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Kondisi Ikan</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="full-time" name="job-type" value="Full-Time">
+                    <label for="full-time">Hidup</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Segar</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="part-time" name="job-type" value="Part-Time">
+                    <label for="part-time">Beku</label>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Rating Toko</label>
+                <div class="rating-options">
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-5" value="5">
+                        <label for="rating-5">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    </label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-4" value="4">
+                        <label for="rating-4">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-3" value="3">
+                        <label for="rating-3">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-2" value="2">
+                        <label for="rating-2">
+                            <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="radio" name="rating" id="rating-1" value="1">
+                        <label for="rating-1">
+                            <span class="star"><i class="fa-solid fa-star"></i><span class="star-empty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label>Ukuran Ikan</label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="entry-level" name="experience" value="Entry">
+                    <label for="entry-level">< 3 kg</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="intermediate-level" name="experience" value="Intermediate">
+                    <label for="intermediate-level">4 - 10 kg</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="expert-level" name="experience" value="Expert">
+                    <label for="expert-level">> 10 kg</label>
+                </div>  
+            </div>
+    
+            <div class="filter-group">
+                <label>Harga Ikan</label>
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="1-10">
+                <label for="">< 30.000</label>
+                </div>
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="11-20">
+                <label for="">31.000 - 100.000</label>
+                </div>
+                
+                <div class="checkbox-wrapper">
+                <input type="radio" name="salary" value="11-20">
+                <label for="">>100.000</label>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="supplier-list">
+            <!-- Supllier 1-->
+            <div class="supplier-card" onclick="showPreview('supplier1')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN AIR LAUT JAKARTA</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>60.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier1.png" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Ikan Air Laut Marunda</h4>
+                        <p>Jakarta Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Kakap</span>
+                        <span class="tag">Sarden</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 2-->
+            <div class="supplier-card" onclick="showPreview('supplier2')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN AIR LAUT JAKARTA</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>25.000-80.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier2.jpg" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Supplier Ikan Laut Tanjung Priok</h4>
+                        <p>Jakarta Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Bandeng</span>
+                        <span class="tag">Tenggiri</span>
+                        <span class="tag">Tongkol</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 3-->
+            <div class="supplier-card" onclick="showPreview('supplier3')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN BEKASI</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>55.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier3.jpg" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Ikan Segar Bekasi</h4>
+                        <p>Bekasi Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Kembung</span>
+                        <span class="tag">Tuna</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 4-->
+            <div class="supplier-card" onclick="showPreview('supplier4')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN TANGERANG</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>45.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier4.jpg" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Ikan Segar Tangerang</h4>
+                        <p>Kota Tangerang</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Kakap</span>
+                        <span class="tag">Bandeng</span>
+                        <span class="tag">Kerapu</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 5-->
+            <div class="supplier-card" onclick="showPreview('supplier5')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN JAKARTA</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>60.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier5.png" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>SUPPLIER IKAN KAMAL MUARA</h4>
+                        <p>Jakarta Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Bandeng</span>
+                        <span class="tag">Tenggiri</span>
+                        <span class="tag">Baronang</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+
+            <!-- Supllier 6-->
+            <div class="supplier-card" onclick="showPreview('supplier1')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN AIR LAUT JAKARTA</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>60.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier1.png" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Ikan Air Laut Marunda</h4>
+                        <p>Jakarta Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Kakap</span>
+                        <span class="tag">Sarden</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 7-->
+            <div class="supplier-card" onclick="showPreview('supplier2')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN AIR LAUT JAKARTA</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>25.000-80.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier2.jpg" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Supplier Ikan Laut Tanjung Priok</h4>
+                        <p>Jakarta Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Bandeng</span>
+                        <span class="tag">Tenggiri</span>
+                        <span class="tag">Tongkol</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 8-->
+            <div class="supplier-card" onclick="showPreview('supplier3')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN BEKASI</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>55.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier3.jpg" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Ikan Segar Bekasi</h4>
+                        <p>Bekasi Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Kembung</span>
+                        <span class="tag">Tuna</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 9-->
+            <div class="supplier-card" onclick="showPreview('supplier4')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN TANGERANG</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>45.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier4.jpg" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>Ikan Segar Tangerang</h4>
+                        <p>Kota Tangerang</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Kakap</span>
+                        <span class="tag">Bandeng</span>
+                        <span class="tag">Kerapu</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            
+            <!-- Supllier 10-->
+            <div class="supplier-card" onclick="showPreview('supplier5')">
+                <div class="supplier-header">
+                    <div class="supplier-info">
+                        <h3>SUPPLIER IKAN JAKARTA</h3>
+                        <button class="loved-btn"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <p>60.000-75.000/kg</p>
+                </div>
+                <div class="supp-detail">
+                    <div class="supplier-logo">
+                        <img src="../Assets/Pic/icon/supplier5.png" alt="Supplier Logo">
+                    </div>
+                    <div class="supplier-name">
+                        <h4>SUPPLIER IKAN KAMAL MUARA</h4>
+                        <p>Jakarta Utara</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="tags">
+                        <span class="tag">Bandeng</span>
+                        <span class="tag">Tenggiri</span>
+                        <span class="tag">Baronang</span>
+                    </div>
+                    <span class="rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="supplier-details" id="supplier-preview">
+            <!-- supplier preview1-->
+            <div id="supplier1" class="supplier-detail active">
+                <div class="preview-header">
+                    <div class="header-title">
+                        <h1><span>SUPPLIER</span> IKAN AIR LAUT JAKARTA</h1>
+                        <p>60.000-75.000/kg</p>
+                    </div>
+                    <span class="preview-rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Kakap</span>
+                    <span class="tag">Kerapu</span>
+                </div>
+                <div class="company-info">
+                    <img src="../Assets/Pic/icon/supplier1.png" alt="Supplier Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Ikan Air Laut Marunda</h2>
+                        <h5>Jakarta Utara</h5>
+                        <p>Sedia Ikan Laut</p>
+                    </div>
+                    <a href="" class="see-profile">Lihat Toko</a>
+                </div>
+                <div class="supplier-description">
+                    <h3>Profil Toko</h3>
+                    <p>
+                        Selamat datang di Toko Ikan Laut Marunda, penyedia utama berbagai jenis ikan laut segar yang berlokasi di Jakarta Utara. Kami berdedikasi untuk memberikan produk ikan berkualitas tinggi yang ditangkap langsung dari laut, memastikan kesegaran dan cita rasa yang tak tertandingi. 
+                    </p>
+                </div>
+                <div class="supplier-description">
+                    <h3>Keunggulan Kami</h3>
+                    <ul>
+                        <li>Kualitas Terbaik: Kami menjamin bahwa semua ikan yang kami jual adalah hasil tangkapan segar dari laut, diproses dengan standar kebersihan tinggi</li>
+                        <li>Harga Kompetitif: Kami menawarkan harga yang bersaing dengan kualitas produk yang luar biasa</li>
+                        <li>Layanan Pelanggan: Tim kami selalu siap membantu dengan pelayanan yang ramah dan profesional</li>
+                        <li>Pengiriman Cepat: Kami menyediakan layanan pengiriman cepat ke seluruh wilayah Jakarta dan sekitarnya untuk memastikan ikan tiba dalam kondisi terbaik.</li>
+                    </ul>
+                </div>
+                <div class="supplier-description">
+                    <h3>Jenis-jenis Ikan</h3>
+                    <ul>
+                        <li>Kakap Merah - Rp 70.000/kg</li>
+                        <li>Kerapu - Rp 75.000/kg</li>
+                    </ul>
+                </div>
+
+                <div class="supplier-product">
+                    <h3>Keranjang Produk</h3>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Kakap.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kakap Merah</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 70.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/kerapu.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kerapu</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 50.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <a href="./SignIn.html"><button class="payment-btn">Ajukan Penawaran</button></a>
+            </div>
+            <!-- supplier preview 2-->
+            <div id="supplier2" class="supplier-detail">
+                <div class="preview-header">
+                    <div class="header-title">
+                        <h1><span>SUPPLIER</span> IKAN AIR LAUT JAKARTA</h1>
+                        <p>25.000-80.000/kg</p>
+                    </div>
+                    <span class="preview-rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Bandeng</span>
+                    <span class="tag">Tenggiri</span>
+                    <span class="tag">Tongkol</span>
+                </div>
+                <div class="company-info">
+                    <img src="../Assets/Pic/icon/supplier2.jpg" alt="Supplier Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Supplier Ikan Laut Tanjung Priok</h2>
+                        <h5>Tanjung Priok - Jakarta Utara</h5>
+                        <p>Sedia Ikan Laut</p>
+                    </div>
+                    <a href="" class="see-profile">Lihat Toko</a>
+                </div>
+                <div class="supplier-description">
+                    <h3>Profil Toko</h3>
+                    <p>
+                        Supplier Ikan Laut Tanjung Priok adalah penyedia berbagai jenis ikan laut segar yang berlokasi di Tanjung Priok, Jakarta Utara. Kami berkomitmen untuk menyediakan produk ikan berkualitas tinggi langsung dari laut, menjamin kesegaran dan cita rasa terbaik untuk pelanggan kami.
+                    </p>
+                </div>
+                <div class="supplier-description">
+                    <h3>Keunggulan Kami</h3>
+                    <ul>
+                        <li>Kualitas Terbaik: Semua ikan yang kami sediakan adalah hasil tangkapan segar dari laut, diproses dengan standar kebersihan tinggi.</li>
+                        <li>Harga Terjangkau: Kami menawarkan harga yang kompetitif dengan kualitas produk unggulan.</li>
+                        <li>Pelayanan Ramah: Tim kami siap melayani dengan profesionalisme dan keramahan.</li>
+                        <li>Pengiriman Cepat: Kami menyediakan layanan pengiriman cepat di wilayah Jakarta Utara dan sekitarnya.</li>
+                    </ul>
+                </div>
+                <div class="supplier-description">
+                    <h3>Jenis-jenis Ikan</h3>
+                    <ul>
+                        <li>Ikan Tenggiri - Rp 120.000/kg</li>
+                        <li>Ikan Cakalang - Rp 35.000/kg</li>
+                        <li>Ikan Tuna - Rp. 65000/kg</li>
+                    </ul>
+                </div>
+
+                <div class="supplier-product">
+                    <h3>Keranjang Produk</h3>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Tenggiri.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Tenggiri</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 120.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/cakalang.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Cakalang</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 35.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Tuna.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Tuna</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 65.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <a href="./SignIn.html"><button class="payment-btn">Ajukan Penawaran</button></a>
+            </div>
+            <!-- supplier preview 3-->
+            <div id="supplier3" class="supplier-detail">
+                <div class="preview-header">
+                    <div class="header-title">
+                        <h1><span>SUPPLIER</span> IKAN BEKASI</h1>
+                        <p>55.000-75.000/kg</p>
+                    </div>
+                    <span class="preview-rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Kembung</span>
+                    <span class="tag">Tuna</span>
+                </div>
+                <div class="company-info">
+                    <img src="../Assets/Pic/icon/supplier3.jpg" alt="Supplier Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Ikan Segar Bekasi</h2>
+                        <h5>Bekasi Utara</h5>
+                        <p>Sedia Ikan Laut dan Tawar</p>
+                    </div>
+                    <a href="" class="see-profile">Lihat Toko</a>
+                </div>
+                <div class="supplier-description">
+                    <h3>Profil Toko</h3>
+                    <p>
+                        Ikan Segar Bekasi adalah penyedia utama ikan segar di Bekasi Utara. Kami berkomitmen untuk menyediakan ikan berkualitas tinggi yang ditangkap langsung dari laut, menjamin kesegaran dan rasa terbaik untuk pelanggan kami.
+                    </p>
+                </div>
+                <div class="supplier-description">
+                    <h3>Keunggulan Kami</h3>
+                    <ul>
+                        <li>Kualitas Terbaik: Semua ikan yang kami sediakan adalah hasil tangkapan segar, diproses dengan standar kebersihan tinggi.</li>
+                        <li>Harga Kompetitif: Kami menawarkan harga yang bersaing dengan kualitas produk yang luar biasa.</li>
+                        <li>Layanan Pelanggan: Tim kami selalu siap membantu dengan pelayanan yang ramah dan profesional.</li>
+                        <li>Pengiriman Cepat: Kami menyediakan layanan pengiriman cepat ke seluruh wilayah Bekasi Utara dan sekitarnya.</li>
+                    </ul>
+                </div>
+                <div class="supplier-description">
+                    <h3>Jenis-jenis Ikan</h3>
+                    <ul>
+                        <li>Gurame - Rp 45.000/kg</li>
+                        <li>Kembung - Rp 25.000/kg</li>
+                    </ul>
+                </div>
+
+                <div class="supplier-product">
+                    <h3>Keranjang Produk</h3>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Gurame.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gurame</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 45.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Ikan Kembung.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kembung</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 25.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <a href="./SignIn.html"><button class="payment-btn">Ajukan Penawaran</button></a>
+            </div>
+            <!-- supplier preview 4-->
+            <div id="supplier4" class="supplier-detail">
+                <div class="preview-header">
+                    <div class="header-title">
+                        <h1><span>SUPPLIER</span> IKAN TANGERANG</h1>
+                        <p>45.000-75.000/kg</p>
+                    </div>
+                    <span class="preview-rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Kakap</span>
+                    <span class="tag">Bandeng</span>
+                    <span class="tag">Kerapu</span>
+                </div>
+                <div class="company-info">
+                    <img src="../Assets/Pic/icon/supplier4.jpg" alt="Supplier Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Ikan Segar Tangerang</h2>
+                        <h5>Kota Tangerang</h5>
+                        <p>Sedia Ikan Laut & Tawar</p>
+                    </div>
+                    <a href="" class="see-profile">Lihat Toko</a>
+                </div>
+                <div class="supplier-description">
+                    <h3>Profil Toko</h3>
+                    <p>
+                        Ikan Segar Tangerang adalah penyedia utama ikan segar di Kota Tangerang. Kami berkomitmen untuk menyediakan produk ikan berkualitas tinggi yang ditangkap langsung dari laut, menjamin kesegaran dan rasa terbaik untuk pelanggan kami.
+                    </p>
+                </div>
+                <div class="supplier-description">
+                    <h3>Keunggulan Kami</h3>
+                    <ul>
+                        <li>Kualitas Terbaik: Semua ikan yang kami sediakan adalah hasil tangkapan segar dari laut, diproses dengan standar kebersihan tinggi.</li>
+                        <li>Harga Terjangkau: Kami menawarkan harga yang kompetitif dengan kualitas produk unggulan.</li>
+                        <li>Pelayanan Ramah: Tim kami siap melayani dengan profesionalisme dan keramahan.</li>
+                        <li>Pengiriman Cepat: Kami menyediakan layanan pengiriman cepat di wilayah Kota Tangerang dan sekitarnya.</li>
+                    </ul>
+                </div>
+                <div class="supplier-description">
+                    <h3>Jenis-jenis Ikan</h3>
+                    <ul>
+                        <li>Kakap Merah - Rp 70.000/kg</li>
+                        <li>Bandeng - Rp 30.000/kg</li>
+                        <li>Kerapu - Rp 50.000/kg</li>
+                    </ul>
+                </div>
+
+                <div class="supplier-product">
+                    <h3>Keranjang Produk</h3>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Kakap.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kakap Merah</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 70.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Bandeng.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bandeng</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 30.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/kerapu.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kerapu</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 50.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <a href="./SignIn.html"><button class="payment-btn">Ajukan Penawaran</button></a>
+            </div>
+
+            <!-- supplier preview5-->
+            <div id="supplier5" class="supplier-detail">
+                <div class="preview-header">
+                    <div class="header-title">
+                        <h1><span>SUPPLIER</span> IKAN JAKARTA</h1>
+                        <p>60.000-75.000/kg</p>
+                    </div>
+                    <span class="preview-rating">5.0 <i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Kakap</span>
+                    <span class="tag">Kerapu</span>
+                </div>
+                <div class="company-info">
+                    <img src="../Assets/Pic/icon/supplier1.png" alt="Supplier Logo" class="company-logo">
+                    <div class="company-details">
+                        <h2>Supplier Ikan Kamal Muara</h2>
+                        <h5>Jakarta Utara</h5>
+                        <p>Sedia Ikan Laut</p>
+                    </div>
+                    <a href="" class="see-profile">Lihat Toko</a>
+                </div>
+                <div class="supplier-description">
+                    <h3>Profil Toko</h3>
+                    <p>
+                        Selamat datang di Supplier Ikan Kamal Muara, pemasok ikan laut segar yang berlokasi di Kamal Muara, Jakarta Utara. Kami menawarkan berbagai jenis ikan segar dengan kualitas yang tak tertandingi.
+                    </p>
+                </div>
+                <div class="supplier-description">
+                    <h3>Keunggulan Kami</h3>
+                    <ul>
+                        <li>Kualitas Terbaik: Kami menjamin bahwa semua ikan yang kami jual adalah hasil tangkapan segar dari laut, diproses dengan standar kebersihan tinggi.</li>
+                        <li>Harga Kompetitif: Kami menawarkan harga yang bersaing dengan kualitas produk yang luar biasa.</li>
+                        <li>Layanan Pelanggan: Tim kami selalu siap membantu dengan pelayanan yang ramah dan profesional.</li>
+                        <li>Pengiriman Cepat: Kami menyediakan layanan pengiriman cepat ke seluruh wilayah Jakarta Utara dan sekitarnya untuk memastikan ikan tiba dalam kondisi terbaik.</li>
+                    </ul>
+                </div>
+                <div class="supplier-description">
+                    <h3>Jenis-jenis Ikan</h3>
+                    <ul>
+                        <li>Bandeng - Rp 30.000/kg</li>
+                        <li>Tenggiri - Rp 90.000/kg</li>
+                        <li>Baronang - Rp 90.000/kg</li>
+                    </ul>
+                </div>
+
+                <div class="supplier-product">
+                    <h3>Keranjang Produk</h3>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Bandeng.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bandeng</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 30.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Tenggiri.png" alt="Tenggiri">
+                        </div>
+                        <div class="product-info">
+                            <h3>Tenggiri</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 90.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../Assets/Pic/ikan/Baronang.png" alt="Kakap Merah">
+                        </div>
+                        <div class="product-info">
+                            <h3>Baronang</h3>
+                            <p>Ikan Laut</p>
+                            <p class="price"><span>Rp 90.000</span> / kg</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">5</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <a href="./SignIn.html"><button class="payment-btn">Ajukan Penawaran</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="../Assets/Pic/Logo.png" alt="">
+        </div>
+        <p class="footer-desc">Ikuti Kami</p>
+        <div class="social-icon">
+            <a href=""><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+        </div>
+        <p class="copyright">Copyright 2024 By FISHIP</p>
+    </footer>
+    
+    
+    <script src="../Assets/js/supplier.js"></script>
+</body>
+</html>
