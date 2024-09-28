@@ -1,4 +1,5 @@
 # FISHIP - FISH E-Commerce
+![image](https://github.com/user-attachments/assets/819f396e-4fb8-449f-b23d-326749fc1a6c)
 
 # 💡What is Fiship
 FISHIP is a dedicated e-commerce platform designed to connect fishermen and fish farmers with a broader market, enabling them to sell their products directly to consumers. The app aims to simplify the process of buying fresh fish, providing a convenient and practical solution for people to access one of their essential food items—fish. With FISHIP, customers can browse a wide variety of fish products and make purchases easily, while supporting local fishermen and aquaculture farmers. FISHIP strives to promote sustainability and streamline the fish supply chain in a user-friendly way.
