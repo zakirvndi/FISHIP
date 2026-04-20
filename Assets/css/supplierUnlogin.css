@@ -98,6 +98,12 @@ header {
     font-weight: 500;
 }
 
+.sign-btn a,
+.sign-btn a:visited,
+.sign-btn a:active {
+    color: black;
+}
+
 .sign-btn .sign-up{
     background-color: var(--primary-color);
     color: white;
